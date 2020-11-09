@@ -1,2 +1,2 @@
-# Init Page
+# Getting Started
 

@@ -1,7 +1,5 @@
 # vue.js
 
-
-
 **Q1. What is Vue.js? What are the advantages of it?**
 
 Vue is a **progressive framework** used to building user interfaces.The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.
@@ -49,8 +47,6 @@ Below are some of the main differences between between `v-show` and `v-if`direct
 **Q4. What is `key` in Vue.js?**
 
 In order to render DOM elements more efficiently, Vue.js reuses the elements instead of creating them from scratch every time. This default mode is efficient, but in some cases it may causes problems. For example, if you try to render the same input element in both `v-if` and `v-else` blocks then it holds the previous value as below:
-
-
 
 **Q5. Why should not use if and for directives together on the same element?**
 
@@ -109,8 +105,6 @@ As we can see, the factory function receives a resolve callback, which should be
 
 Vue.js allows us to define filters that can be used to apply common text formatting. Filters are usable in two places: mustache interpolations and `v-bind`expressions. Filters should be appended to the end of the JavaScript expression, denoted by the "pipe" symbol:![](https://miro.medium.com/max/60/1*iox06xHDwqBJZcDrhKYTlQ.png?q=20)![](https://miro.medium.com/max/1125/1*iox06xHDwqBJZcDrhKYTlQ.png)
 
-
-
 **Q14. What is Vue Router?**
 
 Vue Router is the official router for Vue.js. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js easy to implement. Its features include:
@@ -124,15 +118,13 @@ Vue Router is the official router for Vue.js. It deeply integrates with Vue.js c
 * Customizable Scroll Behavior
 * HTML5 history mode or hash mode, with auto-fallback in IE9
 
-### _Q3_: Explain the differences between one-way data flow and two-way data binding? <a id="q3-explain-the-differences-between-one-way-data-flow-and-two-way-data-binding-"></a>
+## _Q3_: Explain the differences between one-way data flow and two-way data binding? <a id="q3-explain-the-differences-between-one-way-data-flow-and-two-way-data-binding-"></a>
 
 In one-way data flow the view\(UI\) part of application does not updates automatically when data Model is change we need to write some custom code to make it updated every time a data model is changed. In Vue js **v-bind** is used for one-way data flow or binding.
 
 In two-way data binding the view\(UI\) part of application automatically updates when data Model is changed. In Vue.js **v-model** directive is used for two way data binding.
 
-
-
-### _Q4_: How to create Two-Way Bindings in Vue.js? <a id="q4-how-to-create-two-way-bindings-in-vue-js-"></a>
+## _Q4_: How to create Two-Way Bindings in Vue.js? <a id="q4-how-to-create-two-way-bindings-in-vue-js-"></a>
 
 `v-model` directive is used to create Two-Way Bindings in Vue js.In Two-Way Bindings data or model is bind with DOM and Dom is binded back to model.
 
@@ -153,9 +145,9 @@ Q5. Czy vue component jest vue instance?
 
 Tak
 
-### _Q13_: What is the difference v-bind and v-model? Provide some code example. <a id="q13-what-is-the-difference-v-bind-and-v-model-provide-some-code-example-"></a>
+## _Q13_: What is the difference v-bind and v-model? Provide some code example. <a id="q13-what-is-the-difference-v-bind-and-v-model-provide-some-code-example-"></a>
 
-`v-model` is a **two-way binding for form inputs**. It combines `v-bind`, which _**brings a js value**_ ****into the markup, and `v-on:input` to _**update the js value**_.
+`v-model` is a **two-way binding for form inputs**. It combines `v-bind`, which _**brings a js value**_ **\*\*into the markup, and `v-on:input` to \_**update the js value\*\*\_.
 
 Consider:
 
@@ -174,7 +166,7 @@ and it's just syntactic sugar for:
 
 `v-model` works with all the basic HTML input types \(text, textarea, number, radio, checkbox, select\). You can use `v-model` with `input type=date` if your model stores dates as ISO strings \(`yyyy-mm-dd`\).
 
-#### Q14: What is vue instance?
+### Q14: What is vue instance?
 
 Every Vue application works by creating a new Vue instance with the Vue function. Generally the variable vm \(short for ViewModel\) is used to refer Vue instance. You can create vue instance as below,
 
@@ -186,7 +178,7 @@ var vm = new Vue({
 
 As mentioned in the above code snippets, you need to pass options object. You can find the full list of options in the API reference.
 
-#### Q15. Why do you need to use key attribute on for directive?
+### Q15. Why do you need to use key attribute on for directive?
 
 In order to track each node’s identity, and thus reuse and reorder existing elements, you need to provide a unique `key`attribute for each item with in `v-for` iteration. An ideal value for key would be the unique id of each item. Let us take an example usage,
 
@@ -198,7 +190,7 @@ In order to track each node’s identity, and thus reuse and reorder existing el
 
 Hence, It is always recommended to provide a key with v-for whenever possible, unless the iterated DOM content is simple. **Note:** You shouldn’t use non-primitive values like objects and arrays as v-for keys. Use string or numeric values instead.
 
-#### Q16. What are the caveats of array changes detection?
+### Q16. What are the caveats of array changes detection?
 
 Vue cannot detect changes for the array in the below two cases,
 
@@ -232,7 +224,7 @@ vm.todos.splice(indexOfTodo, 1, newTodoValue)
 vm.todos.splice(todosLength)
 ```
 
-#### Q17. What are the event modifiers provided by vue?
+### Q17. What are the event modifiers provided by vue?
 
 Normally, javascript provides event.preventDefault\(\) or event.stopPropagation\(\) inside event handlers. You can use methods provided by vue, but these methods are meant for data logic instead of dealing with DOM events. Vue provides below event modifiers for v-on and these modifiers are directive postfixes denoted by a dot.
 
@@ -257,9 +249,7 @@ You can also chain modifiers as below,
 <a v-on:click.stop.prevent="doThat"></a>
 ```
 
-
-
-#### Q18: What are slots?
+### Q18: What are slots?
 
 Vue implements a content distribution API using the element to serve as distribution outlets for content created after after the current Web Components spec draft. Let's create an alert component with slots for content insertion,
 
@@ -282,7 +272,7 @@ Now you can insert dynamic content as below,
 </alert>
 ```
 
-#### Q19. What is vue router and their features?
+### Q19. What is vue router and their features?
 
 Vue Router is a official routing library for single-page applications designed for use with the Vue.js framework. Below are their features,
 
@@ -325,9 +315,7 @@ const User = {
 
 Note that the beforeRouteEnter guard does NOT have access to `this`. Instead you can pass a callback to `next` to access the vm instance.
 
-
-
-#### Q21. How to create a plugin?
+### Q21. How to create a plugin?
 
 The Plugin is created by exposing an `install` method which takes Vue constructor as a first argument along with options. The structure of VueJS plugin with possible functionality would be as follows,
 
@@ -446,9 +434,9 @@ MyPlugin.install = function (Vue, options) {
 
 **What are render functions? Cite an example.**
 
-Vue allows us to build templates in a multitude of ways, the most common of which is to just use HTML with special directives and mustache tags for reactive features. You can, however, also build templates using JavaScript using a special class of functions, known as render functions. These functions are close to the compiler which means they’re more efficient and faster than other template types. Since you’re using JavaScript for writing render functions, you can use the language freely to add custom functionality directly wherever needed. 
+Vue allows us to build templates in a multitude of ways, the most common of which is to just use HTML with special directives and mustache tags for reactive features. You can, however, also build templates using JavaScript using a special class of functions, known as render functions. These functions are close to the compiler which means they’re more efficient and faster than other template types. Since you’re using JavaScript for writing render functions, you can use the language freely to add custom functionality directly wherever needed.
 
-This is extremely useful for advanced scenarios where standard HTML templates may not be the best option. 
+This is extremely useful for advanced scenarios where standard HTML templates may not be the best option.
 
 **Here’s a Vue app that uses HTML as a template**
 
